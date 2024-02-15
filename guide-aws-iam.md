@@ -11,7 +11,7 @@ aws sts assume-role
 
 ```
 [profile ec2]
-role_arn = arn:aws:iam::169680684171:role/ec2
+role_arn = arn:aws:iam::ACCOUNT:role/ec2
 role_name = ec2
 region= us-east-1
 source_profile=default
@@ -19,7 +19,7 @@ source_profile=default
 
 
 [profile s3]
-role_arn = arn:aws:iam::169680684171:role/s3admin
+role_arn = arn:aws:iam::ACCOUNT:role/s3admin
 role_name = s3admin
 region= us-east-1
 source_profile=default
@@ -37,7 +37,7 @@ aws_secret_access_key = SECRET
 ## manual setup
 ### assume role 
 ```
-aws sts assume-role --role-arn arn:aws:iam::169680684171:role/ec2 --role-session-name "fer-session"
+aws sts assume-role --role-arn arn:aws:iam::ACCOUNT:role/ec2 --role-session-name "fer-session"
 export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=
 export AWS_SESSION_TOKEN=
